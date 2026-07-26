@@ -40,6 +40,13 @@
     opacity:.05;
     background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
   }
+  h1,h2,h3,h4{
+    text-wrap:balance;
+  }
+  p, blockquote, .lede, .product-notes, .ticket p, .section-head p{
+    text-wrap:pretty;
+  }
+  button, .btn{white-space:nowrap;}
   h1,h2,h3{
     font-family:'Abril Fatface',serif;
     font-weight:400;
@@ -51,9 +58,10 @@
     font-family:'Space Mono',monospace;
     text-transform:uppercase;
     letter-spacing:.18em;
-    font-size:.72rem;
+    font-size:12px;
     font-weight:700;
     color:var(--red);
+    margin:0 0 6px;
   }
   .eyebrow.on-ink{color:var(--gold);}
   a{color:inherit;text-decoration:none;}
@@ -170,7 +178,7 @@
   }
   .hero h1{
     font-size:clamp(2.6rem,6vw,5.4rem);
-    margin-top:18px;
+    margin-top:0;
   }
   .hero h1 span.line{
     display:block;
@@ -250,7 +258,7 @@
     margin-bottom:56px;
     flex-wrap:wrap;
   }
-  .section-head h2{font-size:42px;margin-top:14px;}
+  .section-head h2{font-size:42px;margin-top:0;}
   .section-head p{max-width:38ch;color:var(--ink-soft);}
   #kafa .section-head{align-items:center;}
   #kafa.section{padding:120px 0;}
@@ -266,7 +274,7 @@
   .product-card{
     background:var(--paper-dim);
     border-radius:18px;
-    padding:24px 28px 36px;
+    padding:12px 28px 36px;
     text-align:center;
     position:relative;
     border:1px solid rgba(28,21,18,.08);
@@ -321,7 +329,7 @@
     border-radius:0;
   }
   .story-copy{padding:90px 60px;}
-  .story-copy h2{color:var(--paper);font-size:42px;margin-top:14px;}
+  .story-copy h2{color:var(--paper);font-size:42px;margin-top:0;}
   .story-copy p{color:#cfc4b2;max-width:48ch;margin-top:16px;}
   .seal-row{display:flex;gap:12px;margin-top:36px;flex-wrap:nowrap;}
   .seal{
@@ -398,13 +406,14 @@
   .ticket::after{right:-8px;}
   .ticket .tag{
     font-family:'Space Mono',monospace;
-    font-size:.68rem;
+    font-size:12px;
     letter-spacing:.14em;
     text-transform:uppercase;
     color:var(--red);
     font-weight:700;
+    margin:0 0 6px;
   }
-  .ticket h3{font-size:1.35rem;margin-top:10px;font-family:'Abril Fatface',serif;}
+  .ticket h3{font-size:1.35rem;margin-top:0;font-family:'Abril Fatface',serif;}
   .ticket p{margin-top:16px;color:var(--ink-soft);font-size:.94rem;}
 
   /* ===== TESTIMONIAL ===== */
@@ -481,7 +490,7 @@
     background:var(--ink);
     color:var(--paper);
     border:none;
-    padding:0 26px;
+    padding:0 8px;
     white-space:nowrap;
     flex:0 0 auto;
     min-width:170px;
@@ -585,7 +594,7 @@
     .testimonial .wrap{flex-direction:column;text-align:center;gap:28px;}
 
     /* 6. dugme u newsletter formi ne prelama tekst */
-    .news-form button{padding:0 18px;}
+    .news-form button{padding:0 8px;}
   }
 </style>
 </head>
