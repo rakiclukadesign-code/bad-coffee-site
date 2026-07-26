@@ -454,6 +454,7 @@
     text-align:center;
   }
   .newsletter h2{color:var(--paper);font-size:42px;}
+  .newsletter h2 span.line{display:block;}
   .newsletter p{color:#f4d9d2;margin-top:14px;}
   .news-form{
     display:flex;
@@ -465,7 +466,8 @@
     overflow:hidden;
   }
   .news-form input{
-    flex:1;
+    flex:1 1 auto;
+    min-width:0;
     border:none;
     padding:16px 18px;
     font-family:'Work Sans',sans-serif;
@@ -481,7 +483,7 @@
     padding:0 26px;
     white-space:nowrap;
     flex:0 0 auto;
-    min-width:150px;
+    min-width:170px;
   }
   .news-form button:hover{background:var(--red-deep);}
   .fine-print{
@@ -571,13 +573,18 @@
     .section-head{flex-direction:column;align-items:flex-start;gap:12px;}
     #kafa .section-head{align-items:flex-start;margin-bottom:40px;}
     #kafa .section-head p{font-size:16px;margin-top:0;}
-    .product-card{padding-top:24px;padding-bottom:24px;}
+    .product-card{padding-top:12px;padding-bottom:28px;}
+    .product-grid{gap:20px;}
+    .tickets{gap:20px;}
+    #proces .section-head{margin-bottom:40px;}
+    .testimonial cite{margin-top:6px;}
+    .news-form button{min-width:180px;}
 
     /* 5. testimonial */
     .testimonial .wrap{flex-direction:column;text-align:center;gap:28px;}
 
     /* 6. dugme u newsletter formi ne prelama tekst */
-    .news-form button{padding:0 22px;}
+    .news-form button{padding:0 18px;}
   }
 </style>
 </head>
@@ -650,7 +657,7 @@
           <div class="product-photo"><img src="nemirna.png" alt="BAD Coffee Company Nemirna, pakovanje kafe 250g"></div>
           <h3>Nemirna</h3>
           <p class="product-origin">Etiopija · Guji</p>
-          <p class="product-notes">Jasmin, breskva, crni čaj. Za one kojima svetla kafa nije dovoljno komplikovana.</p>
+          <p class="product-notes">Jasmin, breskva, crni čaj. Za ljubitelje svetlih kafa.</p>
           <p class="product-price">1.450 RSD / 250g</p>
           <a href="#" class="btn btn-fill">Dodaj u korpu</a>
         </article>
@@ -658,7 +665,7 @@
           <div class="product-photo"><img src="bezobrazna.png" alt="BAD Coffee Company Bezobrazna, pakovanje kafe 250g"></div>
           <h3>Bezobrazna</h3>
           <p class="product-origin">Kolumbija · Huila</p>
-          <p class="product-notes">Karamela, narandža, tamna čokolada. Slatka na prvi gutljaj, drska na drugi.</p>
+          <p class="product-notes">Karamela, narandža, čokolada. Slatka pa drska.</p>
           <p class="product-price">1.350 RSD / 250g</p>
           <a href="#" class="btn btn-fill">Dodaj u korpu</a>
         </article>
@@ -666,7 +673,7 @@
           <div class="product-photo"><img src="losa-navika.png" alt="BAD Coffee Company Loša Navika, pakovanje kafe 250g"></div>
           <h3>Loša Navika</h3>
           <p class="product-origin">Espreso blend</p>
-          <p class="product-notes">Lešnik, melasa, dim. Napravljena da postane rutina koju nećete hteti da otkažete.</p>
+          <p class="product-notes">Lešnik, melasa, dim. Rutina koju nećete otkazati.</p>
           <p class="product-price">1.250 RSD / 250g</p>
           <a href="#" class="btn btn-fill">Dodaj u korpu</a>
         </article>
@@ -738,7 +745,7 @@
   <section class="newsletter">
     <div class="wrap">
       <p class="eyebrow" style="color:var(--paper);opacity:.85;">Pridruži se lošem društvu</p>
-      <h2>Nove šarže. Bez upozorenja.</h2>
+      <h2><span class="line">Nove šarže.</span><span class="line">Bez upozorenja.</span></h2>
       <p>Prijavi se i saznaj prvi kad stigne nova ponuda, pre nego što nestane.</p>
       <form class="news-form" onsubmit="return false;">
         <input type="email" placeholder="tvoj@email.com" aria-label="Email adresa">
