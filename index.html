@@ -479,6 +479,9 @@
     color:var(--paper);
     border:none;
     padding:0 26px;
+    white-space:nowrap;
+    flex:0 0 auto;
+    min-width:150px;
   }
   .news-form button:hover{background:var(--red-deep);}
   .fine-print{
@@ -548,10 +551,33 @@
     .product-grid{grid-template-columns:1fr;}
     .tickets{grid-template-columns:1fr;}
     .footer-grid{grid-template-columns:1fr 1fr;}
-    .testimonial .wrap{flex-direction:column;text-align:center;}
     .utility-bar .wrap{justify-content:center;text-align:center;}
     .hero h1{font-size:clamp(1.9rem,9vw,2.6rem);}
     h2{font-size:30px !important;}
+
+    /* 4. jedinstven wrapper 360px za sav sadrzaj */
+    .wrap{max-width:360px;padding:0 16px;}
+    .story-copy, .story-visual{padding-left:16px;padding-right:16px;}
+    .story-copy{padding-top:60px;padding-bottom:60px;}
+
+    /* 1. padding sekcija 120px gore/dole */
+    .section, .hero, .testimonial, .newsletter,
+    #kafa.section, #proces.section{padding-top:120px;padding-bottom:120px;}
+
+    /* 2. body text u hero sekciji */
+    .hero p.lede{font-size:16px;}
+
+    /* 3. sekcija Trenutna ponuda */
+    .section-head{flex-direction:column;align-items:flex-start;gap:12px;}
+    #kafa .section-head{align-items:flex-start;margin-bottom:40px;}
+    #kafa .section-head p{font-size:16px;margin-top:0;}
+    .product-card{padding-top:24px;padding-bottom:24px;}
+
+    /* 5. testimonial */
+    .testimonial .wrap{flex-direction:column;text-align:center;gap:28px;}
+
+    /* 6. dugme u newsletter formi ne prelama tekst */
+    .news-form button{padding:0 22px;}
   }
 </style>
 </head>
