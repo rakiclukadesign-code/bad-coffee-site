@@ -578,7 +578,6 @@
     #kafa.section, #proces.section{padding-top:120px;padding-bottom:120px;}
 
     /* 2. body text u hero sekciji */
-    .hero p.lede{font-size:16px;}
 
     /* 3. sekcija Trenutna ponuda */
     .section-head{flex-direction:column;align-items:flex-start;gap:12px;}
@@ -587,8 +586,18 @@
     .product-card{padding-top:18px;padding-bottom:28px;}
     .product-grid{gap:20px;}
     .tickets{gap:24px;}
-    #proces .section-head{margin-bottom:40px;gap:16px;}
+    #proces .section-head{margin-bottom:40px;}
     .testimonial cite{margin-top:6px;}
+
+    /* Hero / Naša priča / Zapisnik šarže: isti razmak i line-height */
+    .hero h1, .story-copy h2, #proces .section-head h2{line-height:1.25;}
+    .hero p.lede, .story-copy p, #proces .section-head p{
+      font-size:16px;
+      line-height:1.55;
+      margin-top:12px;
+    }
+    #proces .section-head{gap:12px;}
+    .hero p.lede{margin-top:12px;}
 
     /* 5. testimonial */
     .testimonial .wrap{flex-direction:column;text-align:center;gap:28px;}
